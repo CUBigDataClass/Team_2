@@ -15,10 +15,10 @@ import os
 #asecret="access secret" # remove this before git push
 
 
-ckey = 'p2ArgngYidQp1wfzhFrSOd8qu'# remove this before git push
-consumer_secret = '8gUorAGkzV9xWUp3VPnK0Jl8Y0Tj242mjczpw6ZaQbZFkpsWVy' # remove this before git push
-access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove this before git push
-access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
+#ckey = 'p2ArgngYidQp1wfzhFrSOd8qu'# remove this before git push
+#consumer_secret = '8gUorAGkzV9xWUp3VPnK0Jl8Y0Tj242mjczpw6ZaQbZFkpsWVy' # remove this before git push
+#access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove this before git push
+#access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
 
 start_time = time.time() #grabs the system time
 keyword_list = ['election'] #track list
