@@ -20,8 +20,13 @@ import os
 #access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove this before git push
 #access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
 
+ckey = 'n6Z77TqskY5ENS63O0Ik7Ccqo'# remove this before git push
+consumer_secret = 'tVdUiDcQ9SQAjFBMLl9110wZbsjHrRsOepXoomuYM21poCQKNM' # remove this before git push
+access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove this before git push
+access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
+
 start_time = time.time() #grabs the system time
-keyword_list = ['election'] #track list
+keyword_list = ['election', 'bernie', 'trump', 'clinton', 'hillary'] #track list
 
 class listener(StreamListener):
  
@@ -58,7 +63,7 @@ class listener(StreamListener):
  
 	def on_error(self, status):
  
-		print statuses
+		print status
 
 auth = OAuthHandler(ckey, consumer_secret)
 auth.set_access_token(access_token_key, access_token_secret)
