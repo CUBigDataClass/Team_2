@@ -12,6 +12,11 @@ collection = db['twitter_collection']
 
 tweets_iterator = collection.find()
 for tweet in tweets_iterator:
+	# collection.find({'text' : 'This will return tweets with only this exact string.'})
+	# tweets = collection.find({'user.screen_name' : 'exactScreenName'})
+	# tweets = collection.find({'text': { '$regex' : 'word'}})
+	# collection.find({"retweeted_status" : { "$exists" : "true"}})
+	
 	try:
 		text = tweet['text']
 		print text.encode('utf-8')
@@ -42,3 +47,4 @@ for tweet in tweets_iterator:
 		print retweeted_screen_name
 	except:
 		print ' no retweet screen name for this '
+

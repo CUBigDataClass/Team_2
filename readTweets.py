@@ -26,7 +26,7 @@ access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove
 access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
 
 start_time = time.time() #grabs the system time
-keyword_list = ['election', 'bernie', 'trump', 'clinton', 'hillary'] #track list
+keyword_list = (['election', 'bernie', 'trump', 'clinton', 'hillary', 'GOP', 'democrat', 'republican'] #track list
 
 class listener(StreamListener):
  
