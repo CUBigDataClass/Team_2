@@ -6,7 +6,9 @@ import json
 import io
 import os
 
-
+#Purpose:
+#This code is now deprecated. We used it to understand how the streaming API works with tweepy. it takes tweets and saves them to a file.
+#Do not run this code on the server
 
 #consumer key, consumer secret, access token, access secret.
 #ckey="Consumer key" # remove this before git push

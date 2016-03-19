@@ -6,6 +6,9 @@ import json
 import os
 import time
 
+#Purpose:
+#This code reads the content from the MongoDB and then prints out the content
+
 client = MongoClient('localhost', 27017)
 db = client['twitter_db']
 collection = db['twitter_collection']

@@ -6,19 +6,28 @@ import json
 import os
 import time
 
-io.open()
+#Purpose
+#This code checks the twitter stream and saves the content to a mongo databse. 
+#make sure all the dependencies are installed before running this code. 
+	#Dependencies are: tweepy, pymong, mongod
+#also make sure the access key is correct
+
+#io.open()
 ckey = 'n6Z77TqskY5ENS63O0Ik7Ccqo'# remove this before git push
 consumer_secret = 'tVdUiDcQ9SQAjFBMLl9110wZbsjHrRsOepXoomuYM21poCQKNM' # remove this before git push
 access_token_key = '25107624-owjnkBTlYzMYkKTqjsWAOxHEh5V6AWVI5OlNiUtLC' # remove this before git push
 access_token_secret = 'd99V1aahIUekjE0lxJhDLyWW552XsNbBwLSqVsOThcRNp' # remove this before git push
 
 start_time = time.time() #grabs the system time
+
+#list of keywords we want to grab
 keyword_list = ['election', 
 'bernie', 'Bernie', 'bernie sanders', 'Bernie Sanders', 
 'trump', 'Trump', 'donald trump', "Donald Trump",
 'hillary', 'Hillary', 'clinton', 'Clinton', 'hillary clinton', 'Hillary Clinton',
-'cruz', 'Cruz', 'ted cruz', 'Ted Cruz'] #track list
-
+'cruz', 'Cruz', 'ted cruz', 'Ted Cruz',
+'GOP', 'gop', 'republican', 'Republican',
+'democrat', 'Democrat'] 
 
 class listener(StreamListener):
 	def __init__(self, start_time, time_limit = 60):
