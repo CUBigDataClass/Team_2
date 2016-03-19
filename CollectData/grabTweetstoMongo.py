@@ -21,13 +21,13 @@ access_token_secret = 'd99V1aahIUekjE0lxJhDLyWW552XsNbBwLSqVsOThcRNp' # remove t
 start_time = time.time() #grabs the system time
 
 #list of keywords we want to grab
-keyword_list = ['election', 
+keyword_list = (['election', 
 'bernie', 'Bernie', 'bernie sanders', 'Bernie Sanders', 
 'trump', 'Trump', 'donald trump', "Donald Trump",
 'hillary', 'Hillary', 'clinton', 'Clinton', 'hillary clinton', 'Hillary Clinton',
 'cruz', 'Cruz', 'ted cruz', 'Ted Cruz',
 'GOP', 'gop', 'republican', 'Republican',
-'democrat', 'Democrat'] 
+'democrat', 'Democrat'])
 
 class listener(StreamListener):
 	def __init__(self, start_time, time_limit = 60):
