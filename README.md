@@ -14,8 +14,12 @@ This project will be taking in twitter data about candidates running in the 206 
 - Evan Brookens
 - Suhas Aksharkumar
 
+##Dependencies
+- tweepy
+- mongodb
+- pymongo
+
 ##How to get it working
-- Basic Streaming for Twitter api using Tweepy.
-- Make sure to intall tweepy with "pip install tweepy"
-- Also, for whatever reason, I had to be inside the tweepy file while running to import tweepy.
+- make sure to install all the dependencies
 - Make sure to put your own consumer key and access token.
+- run the mongoReadTweets.py file
