@@ -1,0 +1,34 @@
+**Collecting Data instructions and commands
+
+//old command to pull tweets and send to an output file(might want to use &)
+python grabTweetsToFileOld.py 
+
+//Pull tweets and add to database "twitter_db", Starts in background because of &
+python grabTweetsToMongo.py &
+
+//Make sure mongodb is started before running above commands. Use command below to check.
+sudo cat /var/log/mongodb/mongod.log
+
+//If mongo is off then use this command
+sudo service mongod start
+
+//and if you want to stop it for some reason
+sudo service mongod stop
+
+**mongo shell commands
+
+//Get into mongo shell command(anywhere)
+mongo
+
+//Show size and DB's on the system
+show dbs
+
+//Switch to our database
+use twitter_db
+
+//quit
+exit
+
+
+
+
