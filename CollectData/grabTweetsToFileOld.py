@@ -11,13 +11,19 @@ import os
 #Do not run this code on the server
 
 #consumer key, consumer secret, access token, access secret.
-ckey = 'n6Z77TqskY5ENS63O0Ik7Ccqo'# remove this before git push
-consumer_secret = 'tVdUiDcQ9SQAjFBMLl9110wZbsjHrRsOepXoomuYM21poCQKNM' # remove this before git push
-access_token_key = '25107624-jMrjYG2do0xY3eiJCTJSf9bvf8jtuOz93Zg5JepfK' # remove this before git push
-access_token_secret = 'hj3vlMrmhkJZR9ii2A0bQ8rfFb9gIYvTZHZgRp6jsBXcO' # remove this before git push
+ckey = ""
+consumer_secret = ""
+access_token_key = ""
+access_token_secret = ""
 
 start_time = time.time() #grabs the system time
-keyword_list = (['election', 'bernie', 'trump', 'clinton', 'hillary', 'GOP', 'democrat', 'republican'])
+keyword_list = (['election', 
+'bernie', 'Bernie', 'bernie sanders', 'Bernie Sanders', 
+'trump', 'Trump', 'donald trump', "Donald Trump",
+'hillary', 'Hillary', 'clinton', 'Clinton', 'hillary clinton', 'Hillary Clinton',
+'cruz', 'Cruz', 'ted cruz', 'Ted Cruz',
+'GOP', 'gop', 'republican', 'Republican',
+'democrat', 'Democrat'])
 
 class listener(StreamListener):
 	def __init__(self, start_time, time_limit=60):

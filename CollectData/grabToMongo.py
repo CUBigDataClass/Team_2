@@ -14,7 +14,7 @@ keyword_list = (['election',
 'cruz', 'Cruz', 'ted cruz', 'Ted Cruz',
 'GOP', 'gop', 'republican', 'Republican',
 'democrat', 'Democrat'])
-
+i=0
 class StreamListener(tweepy.StreamListener):
     def on_connect(self):
         #connection is made
@@ -26,23 +26,25 @@ class StreamListener(tweepy.StreamListener):
         return False
  
     def on_data(self, data):
+        for i in range(0, 500):
         #receive data
-        client = MongoClient('localhost', 27017)
- 
+            client = MongoClient('localhost', 27017)
+            i += 1
         # Use New Twitter database
-        db = client.New_TwitterDB
+            db = client.New_TwitterDB
 
-        datajson = json.loads(data)
+            datajson = json.loads(data)
  
         # Only English Tweets
-        if "lang" in datajson and datajson["lang"] == "en":
+            if "lang" in datajson and datajson["lang"] == "en":
             # store in New Twitter collection
-            db.New_TwitterDB.insert(datajson)
+                db.New_TwitterDB.insert(datajson)
+                i -= 1
 
-CONSUMER_KEY = "vEonqCYTlT5WglV2OePedchly"
-CONSUMER_SECRET = "AZDKA5O7ND8zxUnUA4Av261CMkHW9qDJ6tas76wqqen1UbFfL8"
-ACCESS_TOKEN = "583088622-5jAKHt74mFfzJiQEoj8Cdw06pWhvKexkAAtRt0Ex"
-ACCESS_TOKEN_SECRET = "UcbJpokOKdrsHlVfKu2FRKUfV2hEF1pDlqCVxNL18WW7P"
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""
 
 #Load credentials
 #Authenticating
