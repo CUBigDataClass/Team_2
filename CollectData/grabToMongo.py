@@ -6,6 +6,8 @@ from __future__ import print_function
 import tweepy
 import json
 from pymongo import MongoClient
+import sys
+from httplib import IncompleteRead
 
 keyword_list = (['election', 
 'bernie', 'Bernie', 'bernie sanders', 'Bernie Sanders', 
@@ -26,20 +28,21 @@ class StreamListener(tweepy.StreamListener):
         return False
  
     def on_data(self, data):
-        for i in range(0, 500):
-        #receive data
-            client = MongoClient('localhost', 27017)
-            i += 1
-        # Use New Twitter database
-            db = client.New_TwitterDB
 
-            datajson = json.loads(data)
+        #receive data
+        client = MongoClient('localhost', 27017)
+        # Use New Twitter database
+        db = client.New_TwitterDB
+
+        datajson = json.loads(data)
  
         # Only English Tweets
-            if "lang" in datajson and datajson["lang"] == "en":
+        if "lang" in datajson and datajson["lang"] == "en":
             # store in New Twitter collection
-                db.New_TwitterDB.insert(datajson)
-                i -= 1
+            db.New_TwitterDB.insert(datajson)
+    def on_timeout(self):
+        print >> sys.stderr, 'Timeout...'
+        return True # Don't kill the stream
 
 CONSUMER_KEY = ""
 CONSUMER_SECRET = ""
@@ -52,5 +55,8 @@ auth1 = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth1.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
  
 l = StreamListener(api=tweepy.API(wait_on_rate_limit=True))
-streamer = tweepy.Stream(auth=auth1, listener=l)
-streamer.filter(track=keyword_list)
+try:
+    streamer = tweepy.Stream(auth=auth1, listener=l)
+    streamer.filter(track=keyword_list)
+except IncompleteRead:
+    pass

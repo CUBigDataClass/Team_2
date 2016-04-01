@@ -13,10 +13,10 @@ import time
 #also make sure the access key is correct
 
 #io.open()
-ckey = 'n6Z77TqskY5ENS63O0Ik7Ccqo'# remove this before git push
-consumer_secret = 'tVdUiDcQ9SQAjFBMLl9110wZbsjHrRsOepXoomuYM21poCQKNM' # remove this before git push
-access_token_key = '25107624-owjnkBTlYzMYkKTqjsWAOxHEh5V6AWVI5OlNiUtLC' # remove this before git push
-access_token_secret = 'd99V1aahIUekjE0lxJhDLyWW552XsNbBwLSqVsOThcRNp' # remove this before git push
+ckey = ''# remove this before git push
+consumer_secret = '' # remove this before git push
+access_token_key = '' # remove this before git push
+access_token_secret = '' # remove this before git push
 
 start_time = time.time() #grabs the system time
 
