@@ -146,5 +146,3 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# OAuthConfig File
-config.py
