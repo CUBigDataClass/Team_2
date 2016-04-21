@@ -29,7 +29,7 @@ Temporary Items
 
 # User-specific stuff:
 /website/.idea/*
-.idea/workspace.xml
+/website/.idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries
 .idea/vcs.xml
@@ -148,4 +148,3 @@ ENV/
 
 #ignore our tweepy creds
 config.py
-
