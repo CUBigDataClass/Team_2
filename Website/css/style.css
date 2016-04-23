@@ -25,7 +25,7 @@ a{text-decoration:none;}
 .vertical-top{	vertical-align:top;}/* vertical align top */
 nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
-img{max-width:100%;}
+img{max-width:100%; height: auto; width: auto\9;}
 /*end reset*/
 /*--start-body--*/
 body{
@@ -549,5 +549,4 @@ canvas#bar, canvas#line, canvas#doughnut {
 }
 .graph {
     width: 74%;
-}
 }

@@ -5,6 +5,11 @@
 
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <title>Big Data Team 2</title>
 </head>
   	 <meta charset="utf-8">
@@ -13,13 +18,69 @@
   	 <!-- For bootstrap to work on mobile devices -->
 
 <body>
+  <div class="container">
+  <h2>Election 2016</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Ted Cruz</a></li>
+    <li><a data-toggle="tab" href="#menu1">Hillary Clinton</a></li>
+    <li><a data-toggle="tab" href="#menu2">Bernie Sanders</a></li>
+    <li><a data-toggle="tab" href="#menu3">Donald Trump</a></li>
+  </ul>
 
-	<div class="container-fluid">
-		<div class="jumbotron">
-			<h1>2016 Presidential Election!</h1>
-	  		<p>Using Real Time Twitter analytics to analyze your favorite candidates chances!</p>
-	  	</div>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Ted Cruz Analysis:</h3>
+      <p>
+      	<div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img src="images/Ted_Cruz.jpg" style="max-width:400px;"align="left">
+				<img src="images/Ted_Cruz.jpg" style="max-width:400px;"align="right">
+
+			</tr>
+		</table>
 	</div>
+</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Hillary Clinton Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img class="img-responsive" src="images/Hillary_Clinton.jpg" style="width:300px;height:300px;"align="left">
+				<img class="img-responsive" src="images/Hillary_Clinton.jpg" style="width:300px;height:300px;"align="right">
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Bernie Sanders Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img class="img-responsive" src="images/bernie-sanders.jpg" style="width:300px;height:300px;"align="left">
+				<img class="img-responsive" src="images/bernie-sanders.jpg" style="width:300px;height:300px;"align="right">
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Donald Trump Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img src="images/Donald_Trump.jpg" style="width:300px;height:300px;"align="left">
+				<img src="images/Donald_Trump.jpg" style="width:300px;height:300px;"align="right">
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+  </div>
+</div>
+  
 
 	<div class="col-md-4">
 		<img
@@ -27,21 +88,6 @@
 			src="images/Twitter_logo_blue.png"
 		>
 		<br />
-	</div>
-
-	<h1>Pick your favorite candidate!</h1>
-	<div class="table-responsive">
-  		<table class="table">
-			<tr>
-				<img class="img-responsive" src="images/bernie-sanders.jpg">
-				<img class="img-responsive" src="images/Donald_Trump.jpg">
-				<img class="img-responsive" src="images/Hillary_Clinton.jpg">
-			</tr>
-			<tr>
-				<img class="img-responsive" src="images/Marco_Rubio.jpg">
-				<img class="img-responsive" src="images/Ted_Cruz.jpg">
-			</tr>
-		</table>
 	</div>
 
 </body>
