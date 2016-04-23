@@ -26,6 +26,19 @@ var pie = new d3pie("pieChartCruz", {
         "color": "#587e38"
       }
     ]
+  },
+  "labels": {
+    "outer": {
+			"pieDistance": 15
+		},
+    "mainLabel": {
+      "fontSize": 17
+    },
+    "percentage": {
+        "color": "#ffffff",
+        "fontSize": 15,
+        "decimalPlaces": 0
+    }
   }
 }
 );
