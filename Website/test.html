@@ -1,0 +1,65 @@
+
+<script src="js/d3.v3.min.js"></script>
+<script src="js/d3pie.min.js"></script>
+<script src="js/Chart.js"></script>
+<head>
+  <div id="pieChart"></div>
+<script>
+var pie = new d3pie("pieChart", {
+  "data": {
+    "content": [
+      {
+        "label": "Hate",
+        "value": 8,
+        "color": "#7e3838"
+      },
+      {
+        "label": "Medium",
+        "value": 5,
+        "color": "#7e6538"
+      },
+      {
+        "label": "Medium",
+        "value": 2,
+        "color": "#7c7e38"
+      },
+      {
+        "label": "Love",
+        "value": 3,
+        "color": "#587e38"
+      }
+    ]
+  }
+}
+);
+</script>
+
+<div id="dumb"></div>
+<script>
+  var doughnutData = [
+      {
+        value: 30,
+        color:"#525A7C",
+        label: "Red",
+        labelColor : 'white',
+        labelFontSize : '16'
+      },
+      {
+        value : 50,
+        color : "#82001f",
+        label: "Green"
+      },
+      {
+        value : 40,
+        color : "#cbb25c",
+        label: "Blue"
+      },
+    ];
+  var Options =
+    {
+      animateRotate : false
+    }
+
+new Chart(document.getElementById("doughnut").getContext("2d")).Pie(doughnutData, Options);
+</script>
+</head>
