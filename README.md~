@@ -23,6 +23,3 @@ This project will be taking in twitter data about candidates running in the 206 
 - make sure to install all the dependencies
 - Make sure to put your own consumer key and access token.
 - run the mongoReadTweets.py file
-
-##See chart in action
-- http://codepen.io/oddball285/pen/bpjXKg?editors=0010
