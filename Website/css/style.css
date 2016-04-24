@@ -550,3 +550,9 @@ canvas#bar, canvas#line, canvas#doughnut {
 .graph {
     width: 74%;
 }
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}

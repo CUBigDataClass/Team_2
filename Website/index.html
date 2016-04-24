@@ -20,34 +20,96 @@
 <!-- For bootstrap to work on mobile devices -->
 
 <body>
+
   <div class="container">
     <h2>Election 2016</h2>
     <h3>Analyzing Twitter Data to Predict Election Results</h3>
     <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">Ted Cruz</a></li>
+      <li class="active"><a data-toggle="tab" href="#home">Compare</a></li>
       <li><a data-toggle="tab" href="#menu1">Hillary Clinton</a></li>
       <li><a data-toggle="tab" href="#menu2">Bernie Sanders</a></li>
       <li><a data-toggle="tab" href="#menu3">Donald Trump</a></li>
-      <li><a data-toggle="tab" href="#menu4">Compare</a></li>
+      <li><a data-toggle="tab" href="#menu4">Ted Cruz</a></li>
 
     </ul>
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
-        <h3>Ted Cruz Analysis:</h3>
+        <h3>Compare</h3>
         <p>
          <div class="table-responsive">
-          <table class="table">
-           <tr>
-            <td>
-              <img src="images/Ted_Cruz.jpg" style="max-width:400px;">
-            </td>
-            <td>
-              <div id="pieChartCruz" ></div>
-              <script type="text/javascript" src="js/cruzPie.js"> </script>
-            </td>
-          </tr>
-        </table>
+          <!-- line chart canvas element -->
+        <canvas id="updating-chart" width="500" height="300"></canvas>
+        <div id="js-legend" class="chart-legend"></div>
+        <script>
+         var dData = function() {
+          return Math.round(Math.random() * 90) + 10
+    };
+    var dData2 = function() {
+            return Math.round(Math.random() * 90) + 10
+    };
+  var dData3 = function() {
+            return Math.round(Math.random() * 90) + 10
+    };
+var dData4 = function() {
+            return Math.round(Math.random() * 90) + 10
+    };
+var canvas = document.getElementById('updating-chart'),
+    ctx = canvas.getContext('2d'),
+    startingData = {
+      labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      datasets: [
+          {
+              label: "Bernie",
+              fillColor: "rgba(100,2,220,0)",
+              strokeColor: "rgba(41,8,207,1)",
+              pointColor: "rgba(41,8,207,1)",
+              pointStrokeColor: "#ffff",
+              data: [dData(), dData(), dData(), dData(), dData(), dData(), dData()]
+          },
+          {
+              label: "Hilary",
+              fillColor: "rgba(151,187,205,0)",
+              strokeColor: "rgba(8,207,183,1)",
+              pointColor: "rgba(8,207,183,1)",
+              pointStrokeColor: "#fff",
+              data: [dData2(), dData2(), dData2(), dData2(), dData2(), dData2(), dData2()]
+          },
+        {
+              label: "Trump",
+              fillColor: "rgba(255,0,0,0)",
+              strokeColor: "rgba(255,0,0,1)",
+              pointColor: "rgba(255,0,0,1)",
+              pointStrokeColor: "#fff",
+              data: [dData3(), dData3(), dData3(), dData3(), dData3(), dData3(), dData3()]
+          },
+        {
+              label: "Ted Cruz",
+              fillColor: "rgba(151,187,205,0)",
+              strokeColor: "rgba(153,8,51,1)",
+              pointColor: "rgba(153,8,51,1)",
+              pointStrokeColor: "#fff",
+              data: [dData4(), dData4(), dData4(), dData4(), dData4(), dData4(), dData4()]
+          }
+      ]
+    },
+    latestLabel = startingData.labels[8];
+var options ={
+  animationSteps: 15}
+
+// Reduce the animation steps for demo clarity.
+var myLiveChart = new Chart(ctx).Line(startingData, options);
+setInterval(function(){
+  // Add two random numbers for each dataset
+  myLiveChart.addData([[dData()],[dData2()],[dData3()],[dData4()]], ++latestLabel);
+  // Remove the first point so we dont just add values forever
+  
+  myLiveChart.removeData();
+  
+}, 5000);
+
+myLiveChart.append(legend);
+        </script> 
       </div>
     </p>
   </div>
@@ -88,34 +150,20 @@
 </p>
 </div>
 <div id="menu4" class="tab-pane fade">
-  <h3>Compare</h3>
-  <p><div class="table-responsive">
-    <!-- bar chart canvas element -->
-        <canvas id="income" width="600" height="400"></canvas>
-        <script>
-            // bar chart data
-            var barData = {
-                labels : ["January","February","March","April","May","June"],
-                datasets : [
-                    {
-                        fillColor : "#48A497",
-                        strokeColor : "#48A4D1",
-                        data : [456,479,324,569,702,600]
-                    },
-                    {
-                        fillColor : "rgba(73,188,170,0.4)",
-                        strokeColor : "rgba(72,174,209,0.4)",
-                        data : [364,504,605,400,345,320]
-                    }
-                ]
-            }
-            // get bar chart canvas
-            var income = document.getElementById("income").getContext("2d");
-            // draw bar chart
-            new Chart(income).Bar(barData);
-        </script>
-</div>
-</p>
+  <h3>Ted Cruz</h3>
+    <div class="table-responsive">
+      <table class="table">
+           <tr>
+            <td>
+              <img src="images/Ted_Cruz.jpg" style="max-width:400px;">
+            </td>
+            <td>
+              <div id="pieChartCruz" ></div>
+              <script type="text/javascript" src="js/cruzPie.js"> </script>
+            </td>
+          </tr>
+        </table>
+      </div>
 </div>
 </div>
 </div>
