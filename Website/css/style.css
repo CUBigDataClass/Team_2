@@ -548,11 +548,11 @@ canvas#bar, canvas#line, canvas#doughnut {
     height: 153px !important;
 }
 .graph {
-    width: 74%;
+    width: 65%;
 }
-.chart-legend li span{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
+.box{
+    width: 600px;
+    height: 400px;
+    background-color: lavender;
+    border: solid 1px silver;
 }
