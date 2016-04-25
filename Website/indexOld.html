@@ -1,0 +1,91 @@
+<!doctype html>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+<script src="js/d3pie.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src=js/d3.layout.cloud.js></script>
+<script src='js/Chart.js'></script>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <title>Big Data Team 2</title>
+</head>
+  	 <meta charset="utf-8">
+  	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  	 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	 <!-- For bootstrap to work on mobile devices -->
+
+<body>
+  <div class="container">
+  <h2>Election 2016</h2>
+  <h3>Analyzing Twitter Data to Predict Election Results</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Ted Cruz</a></li>
+    <li><a data-toggle="tab" href="#menu1">Hillary Clinton</a></li>
+    <li><a data-toggle="tab" href="#menu2">Bernie Sanders</a></li>
+    <li><a data-toggle="tab" href="#menu3">Donald Trump</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Ted Cruz Analysis:</h3>
+      <p>
+      	<div class="table-responsive">
+  		<table class="table">
+			<tr>
+        <td>
+        <img src="images/Ted_Cruz.jpg" style="max-width:400px;">
+      </td>
+      <td>
+        <div id="pieChartCruz" ></div>
+        <script type="text/javascript" src="js/cruzPie.js"> </script>
+      </td>
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Hillary Clinton Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img src="images/Hillary_Clinton.jpg"style="max-width:400px;"align="middle">
+        <img src="images/Hillary_Clinton.jpg"style="max-width:400px;"align="middle">
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Bernie Sanders Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img src="images/bernie-sanders.jpg" style="max-width:400px;"align="middle">
+				<img src="images/bernie-sanders.jpg" style="max-width:400px;"align="middle">>
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Donald Trump Analysis:</h3>
+      <p><div class="table-responsive">
+  		<table class="table">
+			<tr>
+				<img src="images/Donald_Trump.jpg" style="max-width:400px;"align="middle">
+				<img src="images/Donald_Trump.jpg" style="max-width:400px;"align="middle">
+			</tr>
+		</table>
+	</div>
+</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
