@@ -1,11 +1,11 @@
-var pie = new d3pie("pieChartCruz", {
+var pie = new d3pie("pieChartSanders", {
   // "size": {
   //    "canvasHeight": 120,
   //    "canvasWidth": 140
   // },
   "header": {
     "title": {
-      "text": "Ted Cruz Results",
+      "text": "Bernie Sanders Results",
       "fontSize": 32,
       "font": "open sans"
     },
@@ -18,7 +18,7 @@ var pie = new d3pie("pieChartCruz", {
     "titleSubtitlePadding": 20
   },
   "footer": {
-    "text": "Total Tweets: 496,871",
+    "text": "Total Tweets: 335,353",
     "color": "#777777",
     "fontSize": 20,
     "font": "verdana",
@@ -37,18 +37,20 @@ var pie = new d3pie("pieChartCruz", {
   "data": {
     "content": [
       {
-        "value": 234412,
+        "label": "Negitive",
+        "value": 133007,
         "color": "#7e3838"
       },
       {
-        "value": 262459,
+        "label": "Positive",
+        "value": 202346,
         "color": "#587e38"
       }
     ]
   },
   "labels": {
     "outer": {
-			"pieDistance": 0
+			"pieDistance": 10
 		},
     "mainLabel": {
       "fontSize": 17
