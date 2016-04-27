@@ -354,41 +354,78 @@
 
       chart.draw(data, options);
 
-      var toggleHillary = document.getElementById("togHillary");
       var hillaryHidden = false;
+      var bernieHidden = false;
+      var trumpHidden = false;
+      var cruzHidden = false;
+
+      var toggleHillary = document.getElementById("togHillary");
       toggleHillary.onclick = function() {
         hillaryHidden = !hillaryHidden;
         view = new google.visualization.DataView(data);
         if(hillaryHidden){
       	  view.hideColumns([1]);
         }
+        if(bernieHidden){
+      	  view.hideColumns([2]);
+        }
+        if(trumpHidden){
+      	  view.hideColumns([3]);
+        }
+        if(cruzHidden){
+      	  view.hideColumns([4]);
+        }
         chart.draw(view, options);
       }
       var toggleBernie = document.getElementById("togBernie");
-      var bernieHidden = false;
       toggleBernie.onclick = function() {
         bernieHidden = !bernieHidden;
         view = new google.visualization.DataView(data);
+        if(hillaryHidden){
+      	  view.hideColumns([1]);
+        }
         if(bernieHidden){
       	  view.hideColumns([2]);
+        }
+        if(trumpHidden){
+      	  view.hideColumns([3]);
+        }
+        if(cruzHidden){
+      	  view.hideColumns([4]);
         }
         chart.draw(view, options);
       }
       var toggleTrump = document.getElementById("togTrump");
-      var trumpHidden = false;
       toggleTrump.onclick = function() {
         trumpHidden = !trumpHidden;
         view = new google.visualization.DataView(data);
+        if(hillaryHidden){
+      	  view.hideColumns([1]);
+        }
+        if(bernieHidden){
+      	  view.hideColumns([2]);
+        }
         if(trumpHidden){
       	  view.hideColumns([3]);
+        }
+        if(cruzHidden){
+      	  view.hideColumns([4]);
         }
         chart.draw(view, options);
       }
       var toggleCruz = document.getElementById("togCruz");
-      var cruzHidden = false;
       toggleCruz.onclick = function() {
         cruzHidden = !cruzHidden;
         view = new google.visualization.DataView(data);
+        if(hillaryHidden){
+      	  view.hideColumns([1]);
+        }
+        if(bernieHidden){
+      	  view.hideColumns([2]);
+        }
+        if(trumpHidden){
+      	  view.hideColumns([3]);
+        }
         if(cruzHidden){
       	  view.hideColumns([4]);
         }
