@@ -396,6 +396,48 @@
       var chart = new google.charts.Line(document.getElementById('linechart_material'));
 
       chart.draw(data, options);
+
+      var toggleHillary = document.getElementById("togHillary");
+      var hillaryHidden = false;
+      toggleHillary.onclick = function() {
+        hillaryHidden = !hillaryHidden;
+        view = new google.visualization.DataView(data);
+        if(hillaryHidden){
+      	  view.hideColumns([1]);
+        }
+        chart.draw(view, options);
+      }
+      var toggleBernie = document.getElementById("togBernie");
+      var bernieHidden = false;
+      toggleBernie.onclick = function() {
+        bernieHidden = !bernieHidden;
+        view = new google.visualization.DataView(data);
+        if(bernieHidden){
+      	  view.hideColumns([2]);
+        }
+        chart.draw(view, options);
+      }
+      var toggleTrump = document.getElementById("togTrump");
+      var trumpHidden = false;
+      toggleTrump.onclick = function() {
+        trumpHidden = !trumpHidden;
+        view = new google.visualization.DataView(data);
+        if(trumpHidden){
+      	  view.hideColumns([3]);
+        }
+        chart.draw(view, options);
+      }
+      var toggleCruz = document.getElementById("togCruz");
+      var cruzHidden = false;
+      toggleCruz.onclick = function() {
+        cruzHidden = !cruzHidden;
+        view = new google.visualization.DataView(data);
+        if(cruzHidden){
+      	  view.hideColumns([4]);
+        }
+        chart.draw(view, options);
+      }
+
     }
    </script>
 
@@ -428,7 +470,11 @@
          <div class="table-responsive">
           <div id="placeholder"></div>
           <!-- line chart canvas element -->
-          <div id="linechart_material" style="width: 900px; height: 600px"></div>
+          <div id="linechart_material" style="width: 900px; height: 520px"></div>
+          <button type="button" id="togHillary">Toggle Hillary</button>
+          <button type="button" id="togBernie">Toggle Bernie</button>
+          <button type="button" id="togTrump">Toggle Trump</button>
+          <button type="button" id="togCruz">Toggle Cruz</button>
           </div>
 </p>
 </div>
