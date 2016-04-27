@@ -10,7 +10,7 @@ var pie = new d3pie("pieChartSanders", {
       "font": "open sans"
     },
     "subtitle": {
-      "text": "Data Taken from 03/25/16-04/15/16",
+      "text": "Data Taken from 04/05/16-04/22/16",
       "color": "#999999",
       "fontSize": 15,
       "font": "open sans"
