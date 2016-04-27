@@ -37,12 +37,10 @@ var pie = new d3pie("pieChartHillary", {
   "data": {
     "content": [
       {
-        "label": "Negitive",
         "value": 303419,
         "color": "#7e3838"
       },
       {
-        "label": "Positive",
         "value": 241600,
         "color": "#587e38"
       }
@@ -50,7 +48,7 @@ var pie = new d3pie("pieChartHillary", {
   },
   "labels": {
     "outer": {
-      "pieDistance": 10
+      "pieDistance": 0
     },
     "mainLabel": {
       "fontSize": 17
