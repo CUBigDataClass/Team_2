@@ -20,14 +20,8 @@
 
     function drawChart() {
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Day');
-      data.addColumn('number', 'Hillary Clinton');
-      data.addColumn('number', 'Bernie Sanders');
-      data.addColumn('number', 'Donald Trump');
-      data.addColumn('number', 'Ted Cruz');
-
-      data.addRows([
+      var data = google.visualization.arrayToDataTable([
+        ["Time", "Hillary Clinton", "Bernie Sanders", "Donald Trump", "Ted Cruz"],
         [1216568,0.042158,0.013225,0.042158,0.063],
         [1216569,0.046434,-0.018358,0.046434,0.108888],
         [1216570,0.022921,0.02907,0.022921,0.109437],
@@ -389,7 +383,7 @@
         width: 900,
         height: 500,
         curveType: 'function',
-        colors: ['blue', 'green', 'red', 'maroon'],
+        colors: ['blue', 'turquoise', 'red', 'maroon'],
         focusTarget: 'string'
       };
 
