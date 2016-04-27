@@ -46,12 +46,12 @@
 
       var options = {
         chart: {
-          title: 'Number of Tweet in Hours',
-          subtitle: 'in millions of Tweets'
+          title: 'Sentiment of Tweets Over 10 days',
+          subtitle: 'Total Tweets Analyzed: 2842171'
         },
         width: 900,
         height: 500,
-        colors: ['lime', 'lightblue', 'purple', 'orange', 'green', 'gray']
+        colors: ['blue', 'lightblue', 'red', 'maroon']
       
       };
 
@@ -70,8 +70,8 @@
 
 <body>
   <div class="container">
-    <h2>Election 2016</h2>
-    <h3>Analyzing Twitter Data to Predict Election Results</h3>
+    <h2><strong>United States Presidential Election 2016</strong></h2>
+    <h3 style="color:darkgrey;">Analyzing Twitter Data to Predict Election Results</h3>
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
       <li><a data-toggle="tab" href="#menu1">Hillary Clinton</a></li>
@@ -84,12 +84,12 @@
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
-        <h3>Sentiment of Tweets of Every Candidate:</h3>
+        <h3>Sentiment of Tweets:</h3>
         <p>
          <div class="table-responsive">
           <div id="placeholder"></div>
           <!-- line chart canvas element -->
-          <div id="linechart_material" style="width: 900px; height: 500px"></div>
+          <div id="linechart_material" style="width: 900px; height: 600px"></div>
           </div>
 </p>
 </div>
@@ -167,17 +167,26 @@
 </div>
 
 <div id="menu5" class="tab-pane fade">
-  <h3>About Team_2:</h3>
+  <h3><strong>The Team</strong></h3>
   <div class="table-responsive">
-    <table class="table">
-     <tr>
-      <td>
-        <h3>About Team_2:</h3>
-      </td>
-      <td>
-      </td>
-    </tr>
-  </table>
+     <h5>Soham Shah</h5>
+     <h5>Suhas Akshar Kumar</h5>
+     <h5>Jingwei Li</h5>
+     <h5>Evan Brookens</h5>
+</div>
+
+<h3><strong>Description</strong></h3>
+<div class="table-responsive">
+     <h5>This project takes in twitter data about candidates running in the 2016 election and then we ran sentiment analysis on those tweets. We display the output using chart.js, d3.org, and googlechars.js.</h5>
+</div>
+<h3><strong>Tools</strong></h3>
+<div class="table-responsive">
+  <h5>Tweepy</h5>
+  <h5>MongoDB</h5>
+  <h5>Spark</h5>
+  <h5>Chart.js</h5>
+  <h5>GoogleChart.js</h5>
+  <h5>Amazon Web Services EC2</h5>
 </div>
 </div>
 
